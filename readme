@@ -65,7 +65,7 @@ whatever you called the build, and start building the .iso image:
 
 root ~$ cd arch-makerspace
 
-root ~/arch-makerspace$ ./build -v
+root ~/arch-makerspace$ ./build.sh -v
 
 This will take quite some time (depending a lot on how many packages you have choosen).
 Feel free to make some coffee, or read up a bit about the archiso on the wiki.

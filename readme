@@ -31,7 +31,10 @@ First of all you should run the archisocreate to check for archiso and also crea
 archie ~$ ./archisocreate 
 
 This will install the package, and then copy editable files into '/root/archisoconfig',
-and copy the bin file to '/usr/bin'.
+
+You should then copy the 'archisogen' file to '/usr/bin', or just copy it to '/root/' if you rather want to.
+
+Now to make a build..
 
 You should always configure your iso image as root!
 

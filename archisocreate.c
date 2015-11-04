@@ -4,18 +4,27 @@
 
 int main()
 {
+	system("sudo pacman -Syu");
 	system("sudo pacman -S archiso");
 
-	system("sudo mkdir /root/archisoconfig");
-	system("sudo cp /usr/share/archiso/configs/releng/packages.both /root/archisoconfig");
-	system("sudo cp /usr/share/archiso/configs/releng/packages.x86_64 /root/archisoconfig");
-	system("sudo cp /usr/share/archiso/configs/releng/packages.i686 /root/archisoconfig");
-	system("sudo cp /usr/share/archiso/configs/releng/pacman.conf");
-	system("sudo mkdir /root/archisoconfig/airootfs");
-	system("sudo mkdir /root/archisoconfig/airootfs/home");
-	system("sudo mkdir /root/archisoconfig/airootfs/root");
-	system("sudo cp /usr/share/archiso/configs/releng/airootfs/root/customize_airootfs.sh /root/archisoconfig/airootfs/root/customize_airootfs.sh");
-	system("sudo mkdir /root/archisoconfig/airootfs/etc");
+	system("sudo su");
+
+	system("mkdir /root/archisoconfig");
+	system("cp /usr/share/archiso/configs/releng/packages.both /root/archisoconfig");
+	system("cp /usr/share/archiso/configs/releng/packages.x86_64 /root/archisoconfig");
+	system("cp /usr/share/archiso/configs/releng/packages.i686 /root/archisoconfig");
+	system("cp /usr/share/archiso/configs/releng/pacman.conf");
+	
+	system("mkdir /root/archisoconfig/airootfs");
+	system("mkdir /root/archisoconfig/airootfs/home");
+	
+	system("mkdir /root/archisoconfig/airootfs/root");
+	system("cp /usr/share/archiso/configs/releng/airootfs/root/customize_airootfs.sh /root/archisoconfig/airootfs/root/customize_airootfs.sh");
+	
+	system("mkdir /root/archisoconfig/airootfs/etc");
+
+	system("chmod +x archisogen");
+	system("cp archisogen /usr/bin");
 
 	system("clear");
 	printf("\n\nCreated base configuration files in /root/archisoconfig - remember to always edit these files as root!\n");

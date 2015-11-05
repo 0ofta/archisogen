@@ -32,7 +32,9 @@ archie ~$ ./archisocreate
 
 This will install the package, and then copy editable files into '/root/archisoconfig',
 
-You should then copy the 'archisogen' file to '/usr/bin', or just copy it to '/root/' if you rather want to.
+It will also copy the 'archisogen' file to '/usr/bin'.
+
+NB! This files must be manually deleted as for now, if you do not want to continue making arch isos!
 
 Now to make a build..
 

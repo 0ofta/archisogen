@@ -10,7 +10,7 @@ int main()
 	system("sudo mkdir -p /root/archisoconfig/airootfs/root");
 
 	system("sudo cp /usr/share/archiso/configs/releng/packages.* /root/archisoconfig");
-	system("sudo cp /usr/share/archiso/configs/releng/pacman.conf");
+	system("sudo cp /usr/share/archiso/configs/releng/pacman.conf /root/archisoconfig");
 	system("sudo cp /usr/share/archiso/configs/releng/airootfs/root/customize_airootfs.sh /root/archisoconfig/airootfs/root/customize_airootfs.sh");
 	
 	system("sudo chmod +x archisogen");

@@ -28,7 +28,7 @@ package() {
   install -D /usr/share/archiso/configs/releng/pacman.conf "$pkgdir"/root/archlive/
   install -D /usr/share/archiso/configs/releng/airootfs/root/customize_airootfs.sh "$pkgdir"/root/archlive/airootfs/root/
   install -D example "$pkgdir"/root/archlive/
-  #install -Dm644 LICENSE-MIT "$pkgdir"/usr/share/licenses/archisogen/LICENSE
+  install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/archisogen/LICENSE
 }
 
 # vim:set ts=2 sw=2 et:

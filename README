@@ -1,0 +1,73 @@
+archisogen
+
+Description
+
+archisogen is a small program to generate base file folders for Arch Linux
+ISO creation using the archiso package from the arch repo.
+
+I found the need to create this simple program, due to lack of rebuilding the .iso
+after the initial build. archisogen simply lets you configure the iso in a separate
+folder, and make test builds in temperary directories for you to run. You can then
+edit further and make a new folder and test again, without moving files around all
+the time. 
+
+When the build turns out to be exactly what you wanted, you can simply tar the 
+'~/archisoconfig' folder and git it or whatever. Mission accomplished.
+
+This is only made for own productivity and is a ruff and far from optimal solution.
+If you need this process to be expanded, it can easily be done from the basics of
+these files. 
+
+I might expand the program to take a --conf-folder or something to make it sligtly
+more convinient, but hey, just tar up when you're done.. no biggy :) Time will show.
+I don't really need it :P
+
+
+Usage
+
+First of all you should run the archisocreate to check for archiso and also create some folders and files in your 
+/root/ directory:
+
+archie ~$ ./archisocreate 
+
+This will install the package, and then copy editable files into '/root/archisoconfig',
+
+It will also copy the 'archisogen' file to '/usr/bin'.
+
+NB! This files must be manually deleted as for now, if you do not want to continue making arch isos!
+
+Now to make a build..
+
+You should always configure your iso image as root!
+
+Su as root and cd to ~archisoconfig directory. From there you can edit and add files 
+according to the Arch wiki. This is fairly straight forward..
+
+Put name of desired packages into packages.both or packages.architecture files (one 
+name per line), and you're done. 
+
+To run things normally run after a normal install, simply put the commands into the
+file ~/archisoconfig/airootfs/root/custominstallscript.sh and this will be run during
+the building of the .iso file, which is the last step.
+
+The ~/archisoconfig/airootfs/ folder is to be thought of as the / of the .iso 
+folder structure. This means that ~/archisoconfig/airootfs/home/archie/ would be 
+archies home folder and so on.
+
+When everything is configured the way you want it, and all packages needed has been 
+put into the packages files you can go on to create the build folder. Go to your 
+home directory (still as root user) and run archisogen:
+
+root ~/archisoconfig$ cd ~
+
+root ~$ archisogen arch-makerspace
+
+You will then get a message when it is done. Then you can cd into arch-makerspace or
+whatever you called the build, and start building the .iso image:
+
+root ~$ cd arch-makerspace
+
+root ~/arch-makerspace$ ./build.sh -v
+
+This will take quite some time (depending a lot on how many packages you have choosen).
+Feel free to make some coffee, or read up a bit about the archiso on the wiki.

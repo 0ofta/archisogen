@@ -18,10 +18,10 @@ int main(int argc, char **argv)
 	system(dummy);
 	
 	/* copy your custom files into base files */
-	sprintf(toodummy, "cp -r ~/archisoconfig/* %s", argv[1]);
+	sprintf(toodummy, "cp -r /root/archlive/* %s", argv[1]);
 	system(toodummy);	
 
-	printf("\n\nDone.\n");
+	printf("\n\nDone. Go to argv[1] to build ISO file.\n");
 	return 0;
 	
 }

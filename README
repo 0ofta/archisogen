@@ -14,9 +14,21 @@ new folder and test again, without moving files around all the time.
 When the build turns out to be exactly what you wanted, you can simply tar the 
 'archisoconfig' folder and git it or whatever. Mission accomplished.
 
+--- INSTALLATION ---
+
+REQUIREMENTS: You are required to run Arch Linux to be able to use Archisogen.
+
+I have not yet valued this project and its current state as worthy of being an AUR package.
+As such, you have to manually download (or copy the content of) PKGBUILD and run:
+
+$ makepkg -cCis
+
+This will compile the program and copy the right files to the right folders.
+You can then follow the usage instructions below to create arch live ISO files.
+
 --- USAGE ---
 
-1. To configure your Arch ISO, change to root and go to /root/archisoconfig directory.
+1. To configure your Arch ISO, change to root and go to /root/archlive directory.
 
 2. From there you can edit and add files according to the ArchWiki archiso documentation.
    NOTE: You should always configure your iso image as root!
@@ -36,7 +48,9 @@ root $ ./build.sh -v
 This will take quite some time (depending a lot on how many packages you have choosen).
 Feel free to make some coffee, or read up a bit about the archiso on the ArchWiki.
 
-For the moment archisogen has hard-coded folders. This is because I was not intending of
+Note:
+For the moment archisogen has hard-coded folders. This is because I was not intending for
 others using it. I will change this very soon, as well as also add some new features, 
-like premade VM options and the likes. However, if you follow the instructions, this 
-WILL work nicely.
+like premade VM options and the likes. Furthermore, this is a C program, which in it self
+makes litltle, to no sense at all, and was only done like this for the excersize in itself.
+When I get the time, this program will be rewritten to simply use bash or tcl instead.

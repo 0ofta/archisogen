@@ -5,12 +5,12 @@ pkgver=0.1.0
 pkgrel=1
 pkgdesc='Simple program to ease the creation of Arch live ISO files'
 arch=('x86_64')
-url='https://github.com/kaarejens/archisogen.git'
+url='https://github.com/0ofta/archisogen.git'
 license=('GPL2')
 depends=('archiso')
 makedepends=('git')
 provides=('archisogen')
-source=($pkgname::git+https://github.com/kaarejens/archisogen)
+source=($pkgname::git+https://github.com/0ofta/archisogen)
 md5sums=('SKIP')
 
 build() {

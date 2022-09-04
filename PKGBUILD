@@ -26,7 +26,7 @@ package() {
 
   install -D /usr/share/archiso/configs/releng/packages.* "$pkgdir"/root/archlive/
   install -D /usr/share/archiso/configs/releng/pacman.conf "$pkgdir"/root/archlive/
-  install -D /usr/share/archiso/configs/releng/airootfs/root/customize_airootfs.sh "$pkgdir"/root/archlive/airootfs/root/
+#  install -D /usr/share/archiso/configs/releng/airootfs/root/customize_airootfs.sh "$pkgdir"/root/archlive/airootfs/root/
   install -Dm644 LICENSE "$pkgdir"/usr/share/licenses/archisogen/LICENSE
 }
 
